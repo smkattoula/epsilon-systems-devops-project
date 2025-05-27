@@ -116,4 +116,4 @@ This Epsilon ShipOps DevOps pipeline shows how modern software moves from a deve
 - **Docker Hub** stores the images.
 - **(Future) AWS** scales it in the cloud.
 
-Every step is automated, repeatable, and documented, ensuring consistency, reliability, and fast delivery—exactly what a professional DevOps team needs. 🚀
+Every step is automated, repeatable, and documented, ensuring consistency, reliability, and fast delivery—exactly what a professional DevOps team needs! 🚀
