@@ -6,7 +6,7 @@ This document explains the Epsilon ShipOps DevOps project in simple terms. Think
 
 ## 1. Starting Point: The Application
 
-At the heart of this project is a small web application built with **FastAPI**—a popular framework for writing web services in Python. Imagine FastAPI as the kitchen where our meal (the app) is prepared. The developer writes the recipe (code), and FastAPI runs it so users can request information. The web application utilizes 3 API endpoints for both retrieving and storing dummy data in a local database.
+At the heart of this project is a small web application built with **FastAPI**—a popular framework for writing web services in Python. Imagine FastAPI as the kitchen where our meal (the app) is prepared. The developer writes the recipe (code), and FastAPI runs it so users can request information. The web application utilizes 3 API endpoints for retrieving and storing dummy data in a local database.
 
 ---
 
