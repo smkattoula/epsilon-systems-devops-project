@@ -28,9 +28,3 @@ jobs:
           context: .
           push: true
           tags: smkattoula/epsilon-systems-devops:latest
-      
-      - name: Deploy to EKS
-        run: |
-          echo "${{ secrets.KUBECONFIG_DATA }}" | base64 --decode > $HOME/.kube/config
-          kubectl apply -f k8s/deployment.yaml
-          kubectl apply -f k8s/service.yaml
