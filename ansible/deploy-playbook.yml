@@ -1,0 +1,48 @@
+---
+- name: Deploy Epsilon ShipOps Docker container
+  hosts: shipops_servers
+  become: true
+
+  tasks:
+    - name: Update apt packages
+      apt:
+        update_cache: yes
+
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+
+    - name: Ensure Docker service is running
+      service:
+        name: docker
+        state: started
+        enabled: true
+
+    - name: Copy project directory to target
+      synchronize:
+        src: "{{ playbook_dir }}/../"
+        dest: /home/smkattoula/epsilon-systems-devops
+        rsync_opts:
+          - "--exclude=venv"
+
+    - name: Build Docker image
+      community.docker.docker_image:
+        name: epsilon-shipops
+        tag: latest
+        source: build
+        build:
+          path: /home/smkattoula/epsilon-systems-devops
+      become: true
+
+    - name: Run Docker container
+      become: true
+      community.docker.docker_container:
+        name: epsilon-shipops
+        image: epsilon-systems-devops:latest
+        state: started
+        restart_policy: always
+        published_ports:
+          - "8000:8000"
+        pull: false
+

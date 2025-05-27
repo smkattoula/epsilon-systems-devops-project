@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: epsilon-shipops
+  labels:
+    app: epsilon-shipops
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: epsilon-shipops
+  template:
+    metadata:
+      labels:
+        app: epsilon-shipops
+    spec:
+      containers:
+        - name: epsilon-shipops
+          image: smkattoula/epsilon-systems-devops:latest
+          ports:
+            - containerPort: 8000
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+          # Run as non-root
+          securityContext:
+            runAsUser: 1000
+            runAsGroup: 3000
+            allowPrivilegeEscalation: false
