@@ -1,4 +1,4 @@
-# Epsilon ShipOps Project: Plain English Explanation for Recruiters
+# Epsilon ShipOps Project: Plain English Explanation
 
 This document explains the Epsilon ShipOps DevOps project in simple terms. Think of it as a guided tour of how we take a software application from a developer’s laptop all the way to being available for users, using modern tools and automated processes. No prior technical knowledge is needed—each concept is explained with everyday analogies.
 
