@@ -1,4 +1,4 @@
-# Epsilon ShipOps Project: Plain English Explanation
+# Epsilon ShipOps Project: Plain English Explanation for Recruiters
 
 This document explains the Epsilon ShipOps DevOps project in simple terms. Think of it as a guided tour of how we take a software application from a developer’s laptop all the way to being available for users, using modern tools and automated processes. No prior technical knowledge is needed—each concept is explained with everyday analogies.
 
@@ -57,9 +57,9 @@ kubectl apply -f k8s/service.yaml
 ```
 And to see it locally:
 ```
-kubectl port-forward svc/epsilon-shipops-service 8080:8000
+kubectl port-forward svc/epsilon-shipops-service 8000:8000
 ```
-Now, anyone can open a web browser and visit http://localhost:8080/docs to see the app’s interface.
+Now, anyone can open a web browser and visit http://localhost:8000/docs to see the app’s interface.
 
 ---
 
@@ -116,4 +116,4 @@ This Epsilon ShipOps DevOps pipeline shows how modern software moves from a deve
 - **Docker Hub** stores the images.
 - **(Future) AWS** scales it in the cloud.
 
-Every step is automated, repeatable, and documented, ensuring consistency, reliability, and fast delivery—exactly what a professional DevOps team needs! 🚀
+Every step is automated, repeatable, and documented, ensuring consistency, reliability, and fast delivery—exactly what a professional DevOps team needs. 🚀
